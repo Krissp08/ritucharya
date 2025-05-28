@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ritucharya - Ayurvedic Seasonal Wisdom</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ritucharya Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary-color: #4CAF50;
@@ -12,155 +13,225 @@
       --bg-color: #fffaf0;
       --text-color: #333;
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
     }
+
     header {
-      background: var(--primary-color);
+      background-color: var(--primary-color);
       color: white;
-      padding: 1rem;
       text-align: center;
+      padding: 1rem;
       font-family: 'Playfair Display', serif;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      background: #e8f5e9;
-      padding: 0.5rem;
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
     }
-    nav a {
-      color: var(--text-color);
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      text-align: center;
-      padding: 2rem;
-      background: url('https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba') center/cover no-repeat;
-      color: white;
-    }
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .seasons-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      padding: 2rem;
-    }
-    .season-card {
+
+    .quiz-card {
       background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 1rem;
-      transition: transform 0.3s ease;
-      width: 90%;
-      max-width: 500px;
-      height: 300px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-      color: inherit;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    @media (min-width: 1024px) {
-      .season-card {
-        flex: 1 1 calc(50% - 2rem);
-      }
+
+    h2 {
+      text-align: center;
+      color: var(--primary-color);
+      font-family: 'Playfair Display', serif;
     }
-    .season-card:hover {
-      transform: scale(1.03);
+
+    .quiz-question {
+      margin-bottom: 1.5rem;
     }
-    .season-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
+
+    .quiz-question p {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    label {
+      display: block;
+      margin: 0.25rem 0;
+    }
+
+    button {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
       border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      display: block;
+      margin: 2rem auto 0;
+      transition: background-color 0.3s ease;
     }
-    .season-card h3 {
-      margin: 0.5rem 0;
+
+    button:hover {
+      background-color: #388e3c;
+    }
+
+    .result {
+      margin-top: 2rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
       color: var(--primary-color);
     }
-    .season-card p {
-      flex-grow: 1;
-    }
-    .wheel {
-      text-align: center;
-      padding: 2rem;
-    }
-    .wheel img {
-      max-width: 300px;
-      border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
+
     footer {
       text-align: center;
       padding: 1rem;
       background: #f0f4c3;
       color: #666;
       font-style: italic;
+      margin-top: 3rem;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>Ritucharya</h1>
-    <p>Ayurvedic Wisdom of Seasonal Living</p>
+    <h1>Ritucharya Quiz</h1>
+    <p>Test your knowledge of Ayurvedic seasonal routines</p>
   </header>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#seasons">Seasons</a>
-    <a href="#basics">Ayurveda Basics</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <section class="hero" id="home">
-    <h2>Live in Harmony with the Seasons</h2>
-    <p>Explore ancient Ayurvedic wisdom for balanced health throughout the year.</p>
-  </section>
-  <section class="seasons-grid" id="seasons">
-    <a href="shishira.html" class="season-card">
-      <img src="https://images.unsplash.com/photo-1608889176650-e053fdd19447?auto=format&fit=crop&w=500&q=60" alt="Shishira" />
-      <h3>Shishira (Late Winter)</h3>
-      <p>Explore seasonal traits, diet, and lifestyle tips.</p>
-    </a>
-    <a href="vasanta.html" class="season-card">
-      <img src="https://images.unsplash.com/photo-1610465299998-f03c8f8ac314?auto=format&fit=crop&w=500&q=60" alt="Vasanta" />
-      <h3>Vasanta (Spring)</h3>
-      <p>Explore seasonal traits, diet, and lifestyle tips.</p>
-    </a>
-    <a href="grishma.html" class="season-card">
-      <img src="https://images.unsplash.com/photo-1599058917212-d750089bcad9?auto=format&fit=crop&w=500&q=60" alt="Grishma" />
-      <h3>Grishma (Summer)</h3>
-      <p>Explore seasonal traits, diet, and lifestyle tips.</p>
-    </a>
-    <a href="varsha.html" class="season-card">
-      <img src="https://images.unsplash.com/photo-1505489302799-1360d52f9d14?auto=format&fit=crop&w=500&q=60" alt="Varsha" />
-      <h3>Varsha (Monsoon)</h3>
-      <p>Explore seasonal traits, diet, and lifestyle tips.</p>
-    </a>
-    <a href="sharad.html" class="season-card">
-      <img src="https://images.unsplash.com/photo-1445820135717-2f4be23b0d20?auto=format&fit=crop&w=500&q=60" alt="Sharad" />
-      <h3>Sharad (Autumn)</h3>
-      <p>Explore seasonal traits, diet, and lifestyle tips.</p>
-    </a>
-    <a href="hemanta.html" class="season-card">
-      <img src="https://images.unsplash.com/photo-1601390609572-15e3b5cc8ae9?auto=format&fit=crop&w=500&q=60" alt="Hemanta" />
-      <h3>Hemanta (Early Winter)</h3>
-      <p>Explore seasonal traits, diet, and lifestyle tips.</p>
-    </a>
-  </section>
-  <section class="wheel">
-    <h2>Seasonal Cycle</h2>
-    <img src="https://www.ayurtimes.com/wp-content/uploads/2018/08/Ritucharya.jpg" alt="Rituchakra Wheel" />
-  </section>
+
+  <main>
+    <div class="quiz-card">
+      <h2>Answer the following questions:</h2>
+      <form id="quizForm">
+        <!-- Sample question -->
+        <div class="quiz-question">
+          <p>1. Which dosha is predominant during the Vata season?</p>
+          <label><input type="radio" name="q1" value="1"> Vata</label>
+          <label><input type="radio" name="q1" value="0"> Pitta</label>
+          <label><input type="radio" name="q1" value="0"> Kapha</label>
+          <label><input type="radio" name="q1" value="0"> All of the above</label>
+        </div>
+
+        
+        <div class="quiz-question">
+          <p>2. What is the best time to wake up according to Ayurveda?</p>
+          <label><input type="radio" name="q2" value="1"> Before sunrise</label>
+          <label><input type="radio" name="q2" value="0"> 9 AM</label>
+          <label><input type="radio" name="q2" value="0"> Noon</label>
+          <label><input type="radio" name="q2" value="0"> After lunch</label>
+        </div>
+
+        
+        <div class="quiz-question">
+          <p>3. Which dosha is predominant during Grishma Ritu (summer)?</p>
+          <label><input type="radio" name="q1" value="0"> Kapha</label>
+          <label><input type="radio" name="q1" value="0"> Vata</label>
+          <label><input type="radio" name="q1" value="1"> Pitta</label>
+          <label><input type="radio" name="q1" value="0"> All of the above</label>
+        </div>
+
+
+        <div class="quiz-question">
+          <p>4. Which season is best suited for Vamana (therapeutic emesis)?</p>
+          <label><input type="radio" name="q3" value="1"> Vasanta (spring)</label>
+          <label><input type="radio" name="q3" value="0"> Grishma (summer)</label>
+          <label><input type="radio" name="q3" value="0"> Sharad (autumn)</label>
+          <label><input type="radio" name="q3" value="0"> Varsha (monsoon)</label>
+        </div>
+
+
+        <div class="quiz-question">
+          <p>5. Which taste (rasa) should be reduced in Sharad Ritu (autumn)?</p>
+          <label><input type="radio" name="q4" value="0"> Sweet</label>
+          <label><input type="radio" name="q4" value="1"> Sour</label>
+          <label><input type="radio" name="q4" value="0"> Bitter</label>
+          <label><input type="radio" name="q4" value="0"> Astringent</label>
+        </div>
+
+
+        <div class="quiz-question">
+          <p>6. In Hemanta Ritu (early winter), which type of food is recommended?</p>
+          <label><input type="radio" name="q5" value="0"> Light and cold</label> 
+          <label><input type="radio" name="q5" value="1"> Heavy, oily, and nourishing</label>
+          <label><input type="radio" name="q5" value="0"> Only raw vegetables</label>
+          <label><input type="radio" name="q5" value="0"> Fasting is preferred</label>
+        </div>
+
+
+        <div class="quiz-question">
+          <p>7. Which daily practice is emphasized during Varsha Ritu (rainy season)?</p>
+          <label><input type="radio" name="q6" value="0"> Exposure to cold air</label>
+          <label><input type="radio" name="q6" value="1"> Use of medicated oils and dry massage</label>
+          <label><input type="radio" name="q6" value="0"> Avoiding exercise completely</label>
+          <label><input type="radio" name="q6" value="0"> Daytime sleeping</label>
+        </div>
+
+
+        <div class="quiz-question">
+          <p>8. In Ayurveda, the year is divided into how many ritus (seasons)?</p>
+          <label><input type="radio" name="q7" value="0"> 4</label>
+          <label><input type="radio" name="q7" value="1"> 6</label>
+          <label><input type="radio" name="q7" value="0"> 12</label>
+          <label><input type="radio" name="q7" value="0"> 2</label>
+        </div>
+
+
+        <div class="quiz-question">
+          <p>9. Which dosha tends to aggravate in Shishira Ritu (late winter)?</p>
+          <label><input type="radio" name="q8" value="0"> Pitta</label>
+          <label><input type="radio" name="q8" value="0"> Vata</label>
+          <label><input type="radio" name="q8" value="1"> Kapha</label>
+          <label><input type="radio" name="q8" value="0"> None</label>
+        </div>
+
+
+        <div class="quiz-question">
+          <p>10. Which seasonal practice is emphasized during Sharad Ritu?</p>
+          <label><input type="radio" name="q9" value="0"> Heavy food and daytime sleep</label>
+          <label><input type="radio" name="q9" value="1"> Cooling therapies and light, bitter food</label>
+          <label><input type="radio" name="q9" value="0"> Excessive oil massage</label>
+          <label><input type="radio" name="q9" value="0"> Fasting for days</label>
+
+        </div>
+
+
+        <button type="button" onclick="calculateScore()">Submit</button>
+      </form>
+
+      <div id="result" class="result"></div>
+    </div>
+  </main>
+
   <footer>
-    <p>“When diet is wrong, medicine is of no use. When diet is correct, medicine is of no need.”</p>
+    <p>“Health is the greatest gift, contentment the greatest wealth.” — Buddha</p>
+    <p>© 2025 Ritucharya. All rights reserved.</p>
   </footer>
+
+  <script>
+    function calculateScore() {
+      const form = document.forms["quizForm"];
+      let total = 0;
+      let totalQuestions = 0;
+
+      for (let i = 1; form["q" + i]; i++) {
+        total += parseInt(form["q" + i].value || "0");
+        totalQuestions++;
+      }
+
+      const result = document.getElementById("result");
+      result.innerText = `You scored ${total} out of ${totalQuestions}`;
+    }
+  </script>
 </body>
+
 </html>
