@@ -13,6 +13,10 @@
       --text-color: #333;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
@@ -30,35 +34,51 @@
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 0.5rem;
       background: #e8f5e9;
       padding: 0.5rem;
     }
+
     nav a {
-      display: inline-block;
-      
       color: var(--primary-color);
       text-decoration: none;
       font-weight: bold;
-      border: 2px solid var(--primary-color);
       padding: 0.5rem 1rem;
       border-radius: 4px;
       transition: background-color 0.3s ease;
     }
+
     nav a:hover {
       background-color: var(--primary-color);
       color: white;
     }
+
     .hero {
+      position: relative;
       text-align: center;
-      padding: 2rem;
-      background: url('https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba') center/cover no-repeat;
+      padding: 2rem 1rem;
       color: white;
+      background: url('https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba') center/cover no-repeat;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .hero h2, .hero p {
+      position: relative;
+      z-index: 1;
     }
 
     .hero h2 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin-bottom: 0.5rem;
     }
 
@@ -66,8 +86,8 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 2rem;
-      padding: 2rem;
+      gap: 1.5rem;
+      padding: 2rem 1rem;
     }
 
     .season-card {
@@ -75,21 +95,13 @@
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       padding: 1rem;
-      transition: transform 0.3s ease;
-      width: 90%;
+      width: 100%;
       max-width: 500px;
-      height: 500px;
-      box-sizing: border-box;
+      transition: transform 0.3s ease;
       display: flex;
       flex-direction: column;
       text-decoration: none;
       color: inherit;
-    }
-
-    @media (min-width: 1024px) {
-      .season-card {
-        flex: 1 1 calc(50% - 2rem);
-      }
     }
 
     .season-card:hover {
@@ -98,7 +110,8 @@
 
     .season-card img {
       width: 100%;
-      height: 350px;
+      height: auto;
+      max-height: 250px;
       object-fit: cover;
       border-radius: 8px;
     }
@@ -108,27 +121,36 @@
       color: var(--primary-color);
     }
 
-    .season-card p {
-      flex-grow: 1;
-    }
-
     .wheel {
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
     }
 
     .wheel img {
       width: 100%;
-      height: 350px;
-      object-fit: cover;
+      max-width: 500px;
+      height: auto;
       border-radius: 12px;
-      width: 500px;
     }
-    .quiz{
-      background-color: #4CAF50;
-      text-align: center;
-      height: 50px;
-      width: 150px;
+
+    .quiz-link {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .quiz-link a {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .quiz-link a:hover {
+      background-color: #388e3c;
     }
 
     footer {
@@ -138,13 +160,26 @@
       color: #666;
       font-style: italic;
     }
+
+    @media (min-width: 768px) {
+      .hero h2 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .season-card {
+        flex: 1 1 calc(45% - 2rem);
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Ritucharya</h1>
-    <p>The Ultimate Ayurvedic Guide To A Healty Lifestyle</p>
+    <p>The Ultimate Ayurvedic Guide To A Healthy Lifestyle</p>
   </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="shishir.html">Shishira</a>
@@ -154,6 +189,7 @@
     <a href="sharad.html">Sharad</a>
     <a href="hemant.html">Hemanta</a>
   </nav>
+
   <section class="hero" id="home">
     <h2>Live in Harmony with the Seasons</h2>
     <p>Explore ancient Ayurvedic wisdom for balanced health throughout the year.</p>
@@ -200,12 +236,15 @@
     <h2>Seasonal Cycle</h2>
     <img src="https://files.catbox.moe/q9mvyl.jpeg" alt="Rituchakra Wheel" />
   </section>
-  <nav>
-    <a href="new.html">Take A Quiz→</a>
-  </nav>
+
+
+  <div class="quiz-link">
+    <a href="new.html">Take A Quiz →</a>
+  </div>
+
   <footer>
     <p>“When diet is wrong, medicine is of no use. When diet is correct, medicine is of no need.”</p>
-    <p>Copyright © [2025] [Ritucharya]. All rights reserved.</p>
+    <p>Copyright © 2025 Ritucharya. All rights reserved.</p>
   </footer>
 </body>
 </html>
