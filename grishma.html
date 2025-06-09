@@ -84,6 +84,14 @@
       background-color: var(--primary-color);
       color: white;
     }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ccc;
+    }
   </style>
 </head>
 <body>
@@ -102,44 +110,74 @@
     <p><strong>Corresponding Gregorian Months:</strong> May - June</p>
   </section>
 
-  <section>
+  <section style="display: flex; align-items: flex-start; gap: 1rem;">
+  <div style="flex: 2;">
     <h3>Main Characteristics</h3>
     <ul>
-    <li>Hot, dry weather</li>
-    <li>Dominant Elements: Fire & Air</li>
-    <li>Dosha Influence: Increase in Pitta, decrease in Kapha and Vata</li>
+      <li>Hot, dry weather</li>
+      <li>Dominant Elements: Fire & Air</li>
+      <li>Dosha Influence: Increase in Pitta, decrease in Kapha and Vata</li>
     </ul>
-  </section>
+  </div>
+  
+</section>
 
-  <section>
-    <h3>Diet Recommendations</h3>
-    <p><strong>🟢 Do:</strong></p>
-    <ul class="do-list">
-    <li>Cooling, light foods</li>
-    <li>Fresh fruits and vegetables</li>
-    <li>Hydrating liquids like coconut water</li>
-    </ul>
-    <p><strong>🔴 Don’t:</strong></p>
-    <ul class="dont-list">
-    <li>Spicy, oily foods</li>
-    <li>Alcohol and caffeine</li>
-    </ul>
-  </section>
+<section>
+  <h3>Diet Recommendations</h3>
+  <div style="display: flex; align-items: flex-start; gap: 1rem;">
 
-  <section>
-    <h3>Lifestyle Tips</h3>
-    <p><strong>🟢 Do:</strong></p>
-    <ul class="do-list">
-    <li>Stay hydrated</li>
-    <li>Practice cooling exercises</li>
-    <li>Avoid midday sun</li>
-    </ul>
-    <p><strong>🔴 Don’t:</strong></p>
-    <ul class="dont-list">
-    <li>Overexertion</li>
-    <li>Heavy physical work during hottest hours</li>
-    </ul>
-  </section>
+    <!-- Text Content: Do and Don’t -->
+    <div style="flex: 2;">
+      <p><strong>🟢 Do:</strong></p>
+      <ul class="do-list">
+        <li>Cooling, light foods</li>
+        <li>Fresh fruits and vegetables</li>
+        <li>Hydrating liquids like coconut water</li>
+      </ul>
+      <p><strong>🔴 Don’t:</strong></p>
+      <ul class="dont-list">
+        <li>Spicy, oily foods</li>
+        <li>Alcohol and caffeine</li>
+      </ul>
+    </div>
+
+    <!-- Image beside text -->
+    <div style="flex: 1;">
+      <img src="img/diet2.png" alt="Diet Illustration" style="width: 150%; max-width: 250px; border-radius: 10px;" />
+    </div>
+
+  </div>
+</section>
+
+
+
+<section>
+  <h3>Lifestyle Tips</h3>
+  <div style="display: flex; align-items: flex-start; gap: 1rem;">
+
+    <!-- Text content -->
+    <div style="flex: 2;">
+      <p><strong>🟢 Do:</strong></p>
+      <ul class="do-list">
+        <li>Stay hydrated</li>
+        <li>Practice cooling exercises</li>
+        <li>Avoid midday sun</li>
+      </ul>
+      <p><strong>🔴 Don’t:</strong></p>
+      <ul class="dont-list">
+        <li>Overexertion</li>
+        <li>Heavy physical work during hottest hours</li>
+      </ul>
+    </div>
+
+    <!-- Image aligned right of text -->
+    <div style="flex: 1;">
+      <img src="img/CH1.png" alt="Lifestyle Illustration" style=" max-width: 200px; border-radius: 8px;" />
+    </div>
+
+  </div>
+</section>
+
 
   <section>
     <h3>Common Health Issues + Ayurvedic Balance Tips</h3>
@@ -149,5 +187,9 @@
     <li>Use cooling herbs and soothing oils</li>
     </ul>
   </section>
+  <footer>
+    &copy; 2025 Ritucharya Ayurveda. All rights reserved.
+  </footer>
 </body>
 </html>
+
