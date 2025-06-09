@@ -84,6 +84,14 @@
       background-color: var(--primary-color);
       color: white;
     }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ccc;
+    }
   </style>
 </head>
 <body>
@@ -93,7 +101,7 @@
   </header>
 
   <nav>
-    <a href="ritucharya.html">← Back to Home</a>
+    <a href="index.html">← Back to Home</a>
   </nav>
 
   <section>
@@ -112,32 +120,47 @@
   </section>
 
   <section>
-    <h3>Diet Recommendations</h3>
-    <p><strong>🟢 Do:</strong></p>
-    <ul class="do-list">
-      <li>Bitter, astringent, and sweet foods</li>
-    <li>Cooling herbs and fruits</li>
-    </ul>
-    <p><strong>🔴 Don’t:</strong></p>
-    <ul class="dont-list">
-      <li>Spicy, sour, or salty foods</li>
-    <li>Excessive sunlight exposure</li>
-    </ul>
-  </section>
+  <h3>Diet Recommendations</h3>
+  <div style="display: flex; align-items: flex-start; gap: 1rem;">
+    <div style="flex: 2;">
+      <p><strong>🟢 Do:</strong></p>
+      <ul class="do-list">
+        <li>Bitter, astringent, and sweet foods</li>
+        <li>Cooling herbs and fruits</li>
+      </ul>
+      <p><strong>🔴 Don’t:</strong></p>
+      <ul class="dont-list">
+        <li>Spicy, sour, or salty foods</li>
+        <li>Excessive sunlight exposure</li>
+      </ul>
+    </div>
+    <div style="flex: 1;">
+      <img src="img/sun1.png" alt="Sharad Diet" style="width: 100%; max-width: 200px; border-radius: 8px;" />
+    </div>
+  </div>
+</section>
 
-  <section>
-    <h3>Lifestyle Tips</h3>
-    <p><strong>🟢 Do:</strong></p>
-    <ul class="do-list">
-      <li>Moonlight walks, meditation</li>
-    <li>Light exercise in cool hours</li>
-    </ul>
-    <p><strong>🔴 Don’t:</strong></p>
-    <ul class="dont-list">
-      <li>Late nights</li>
-    <li>Heavy workouts</li>
-    </ul>
-  </section>
+<section>
+  <h3>Lifestyle Tips</h3>
+  <div style="display: flex; align-items: flex-start; gap: 1rem;">
+    <div style="flex: 2;">
+      <p><strong>🟢 Do:</strong></p>
+      <ul class="do-list">
+        <li>Moonlight walks, meditation</li>
+        <li>Light exercise in cool hours</li>
+      </ul>
+      <p><strong>🔴 Don’t:</strong></p>
+      <ul class="dont-list">
+        <li>Late nights</li>
+        <li>Heavy workouts</li>
+      </ul>
+    </div>
+    <div style="flex: 1;">
+      <img src="img/meditation1.gif" alt="Sharad Lifestyle" style="width: 200%; max-width: 300px; border-radius: 12px;" />
+    </div>
+  </div>
+</section>
+
 
   <section>
     <h3>Common Health Issues + Ayurvedic Balance Tips</h3>
@@ -147,5 +170,9 @@
     <li>Use of ghee, milk, and cool baths</li>
     </ul>
   </section>
+  <footer>
+    &copy; 2025 Ritucharya Ayurveda. All rights reserved.
+  </footer>
 </body>
 </html>
+
