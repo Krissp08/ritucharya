@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -55,31 +55,59 @@
       color: white;
     }
 
-    .hero {
+    .hero-slider {
       position: relative;
-      text-align: center;
-      padding: 2rem 1rem;
-      color: white;
-      background: url('https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba') center/cover no-repeat;
+      height: 60vh;
+      overflow: hidden;
     }
 
-    .hero::before {
+    .hero-slider .slides {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-slider .slides img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .hero-slider .slides img.active {
+      opacity: 1;
+      z-index: 0;
+    }
+
+    .hero-slider::before {
       content: "";
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
       background: rgba(0, 0, 0, 0.4);
-      z-index: 0;
-    }
-
-    .hero h2, .hero p {
-      position: relative;
       z-index: 1;
     }
 
-    .hero h2 {
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      padding: 2rem 1rem;
+    }
+
+    .hero-content h2 {
       font-size: 2rem;
       margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero-content h2 {
+        font-size: 2.5rem;
+      }
     }
 
     .seasons-grid {
@@ -161,12 +189,6 @@
       font-style: italic;
     }
 
-    @media (min-width: 768px) {
-      .hero h2 {
-        font-size: 2.5rem;
-      }
-    }
-
     @media (min-width: 1024px) {
       .season-card {
         flex: 1 1 calc(45% - 2rem);
@@ -182,18 +204,23 @@
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="shishir.html">Shishira</a>
-    <a href="vasant.html">Vasanta</a>
-    <a href="grishma.html">Grishma</a>
-    <a href="varsha.html">Varsha</a>
-    <a href="sharad.html">Sharad</a>
-    <a href="hemant.html">Hemanta</a>
+    <a href="#seasons">Seasons</a>
+    <a href="basic.html">Ayurveda Basics</a>
+    <a href="about.html">About Us</a>
   </nav>
 
-  <section class="hero" id="home">
-    <h2>Live in Harmony with the Seasons</h2>
-    <p>Explore ancient Ayurvedic wisdom for balanced health throughout the year.</p>
+  <section class="hero-slider" id="home">
+    <div class="slides">
+      <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba" alt="Winter Landscape">
+      <img src="https://images.pexels.com/photos/64221/flower-sunflower-karnataka-india-64221.jpeg" alt="Sunflower Field">
+      <img src="https://images.pexels.com/photos/913807/pexels-photo-913807.jpeg" alt="Monsoon Scene">
+    </div>
+    <div class="hero-content">
+      <h2>Live in Harmony with the Seasons</h2>
+      <p>Explore ancient Ayurvedic wisdom for balanced health throughout the year.</p>
+    </div>
   </section>
+
   <section class="seasons-grid" id="seasons">
     <a href="shishir.html" class="season-card">
       <img src="https://images.pexels.com/photos/17167746/pexels-photo-17167746/free-photo-of-valley-and-snowed-mountains.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Shishira">
@@ -202,7 +229,7 @@
       <p>Explore seasonal traits, diet, and lifestyle tips.</p>
     </a>
     <a href="vasant.html" class="season-card">
-      <img src="https://images.pexels.com/photos/30651014/pexels-photo-30651014/free-photo-of-myna-bird-perched-on-rustic-wooden-fence-in-thailand.jpeg?auto=compress&cs=tinysrgb&w=1200 " alt="Vasanta">
+      <img src="https://images.pexels.com/photos/30651014/pexels-photo-30651014/free-photo-of-myna-bird-perched-on-rustic-wooden-fence-in-thailand.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Vasanta">
       <h3>Vasanta (Spring)</h3>
       <p>The Awakening of Life and Vitality</p>
       <p>Explore seasonal traits, diet, and lifestyle tips.</p>
@@ -232,11 +259,11 @@
       <p>Explore seasonal traits, diet, and lifestyle tips.</p>
     </a>
   </section>
+
   <section class="wheel">
     <h2>Seasonal Cycle</h2>
     <img src="https://files.catbox.moe/q9mvyl.jpeg" alt="Rituchakra Wheel" />
   </section>
-
 
   <div class="quiz-link">
     <a href="new.html">Take A Quiz →</a>
@@ -245,6 +272,23 @@
   <footer>
     <p>“When diet is wrong, medicine is of no use. When diet is correct, medicine is of no need.”</p>
     <p>Copyright © 2025 Ritucharya. All rights reserved.</p>
+    <p>Image source: Pexels and Unsplash</p>
   </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.hero-slider .slides img');
+    let index = 0;
+
+    function showSlide() {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+      index = (index + 1) % slides.length;
+    }
+
+    showSlide(); // Show first slide
+    setInterval(showSlide, 5000); // Change slide every 5s
+  </script>
 </body>
 </html>
+
