@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shishira (Late Winter) - Ritucharya</title>
+  <meta name="description" content="Discover the seasonal wisdom of Ayurveda through Ritucharya. Learn about Shishira (Late Winter) and how to align your diet and lifestyle for health and balance." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #4CAF50;
+      --accent-color: #FFC107;
+      --bg-color: #fffaf0;
+      --text-color: #333;
+      --header-bg: var(--primary-color);
+      --header-color: white;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0 auto;
+      padding: 1rem;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      max-width: 900px;
+    }
+
+    header {
+      background: var(--header-bg);
+      color: var(--header-color);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      margin: 0 0 0.25rem;
+      font-size: 2.5rem;
+    }
+
+    header h2 {
+      margin: 0;
+      font-weight: normal;
+      font-size: 1.25rem;
+      font-style: italic;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      flex: 1 1 calc(25% - 1rem); /* default 4 per row */
+      text-align: center;
+    }
+
+    nav a:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        flex: 1 1 calc(25% - 0.5rem); /* 4 per row */
+      }
+
+      nav a:nth-child(n+5) {
+        flex: 1 1 calc(33.33% - 0.5rem); /* 3 per second row */
+      }
+    }
+
+    .quote {
+      text-align: center;
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: 2rem;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .flex-container img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+    }
+
+    .flex-container p {
+      flex: 1 1 300px;
+    }
+
+    h3 {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ayurveda Basics</h1>
+    <h2>Seasonal Living with Ritucharya</h2>
+  </header>
+
+  <nav aria-label="Season Navigation">
+    <a href="index.html">Home</a>
+    <a href="shishir.html">Shishira</a>
+    <a href="vasant.html">Vasanta</a>
+    <a href="grishma.html">Grishma</a>
+    <a href="varsha.html">Varsha</a>
+    <a href="sharad.html">Sharad</a>
+    <a href="hemant.html">Hemanta</a>
+  </nav>
+
+  <main>
+    <p class="quote">|| तस्य शीताद्याः आहारबलं वर्णश्च वर्धते। तस्य ऋतुसात्म्यं उक्तं चेष्टाहारव्यपाश्रयम ||</p>
+
+    <section class="flex-container">
+      <p>
+        Discover the timeless wisdom of Ayurveda, India’s ancient system of natural healing, rooted in balance and harmony. Our platform is dedicated to exploring Ritucharya—the seasonal regimen prescribed by Ayurveda—to help you align your lifestyle with nature’s rhythms for optimal health and well-being.
+        <br><strong>Ritucharya</strong>, derived from the Sanskrit words <strong>“Ritu”</strong> (season) and <strong>“Charya”</strong> (regimen), offers practical guidance on diet, behavior, and routine according to seasonal changes. By understanding and implementing these seasonal practices, you can enhance immunity, prevent diseases, and maintain a balanced mind-body constitution throughout the year.  
+      </p>
+      <img src="img/rutu1.jpeg" alt="Ritucharya seasonal guidance image">
+    </section>
+
+    <section class="flex-container">
+      <img src="img/season.jpeg" alt="Ayurvedic seasonal division">
+      <p>
+        To maintain hormonal balance, health, and strength, Ritucharya recommends seasonal diets, habits, and routines. Ayurveda divides the year into two periods based on the sun’s position:
+        <br><strong><u>A. Aadaan Kaal (Uttarayan)</u></strong><br>
+        <strong><u>B. Visarga Kaal (Dakshinayan)</u></strong><br>
+        During Uttarayan, the sun and wind diminish the earth’s cooling energy. In Dakshinayan, lunar and moisture influences restore it. Uttarayan includes summer, spring, and late winter; Dakshinayan includes monsoon, autumn, and early winter. These cycles affect internal Doshas and influence Ayurvedic health strategies.
+      </p>
+    </section>
+
+    <section style="display: flex; justify-content: center;">
+      <img src="img/intro.jpeg" style="width: 100%; max-width: 600px; border-radius: 8px;">
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Ritucharya Ayurveda. All rights reserved.
+  </footer>
+</body>
+</html>

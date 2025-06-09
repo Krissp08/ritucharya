@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Ritucharya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #4CAF50;
+      --accent-color: #FFC107;
+      --bg-color: #fffaf0;
+      --text-color: #333;
+      --header-bg: var(--primary-color);
+      --header-color: white;
+    }
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 1rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    header {
+      background: var(--header-bg);
+      color: var(--header-color);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      margin: 0 0 0.25rem 0;
+      font-size: 2.5rem;
+    }
+    nav a {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    .developer {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .developer:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .developer img {
+      width: 180px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid var(--accent-color);
+    }
+    .dev-info h3 {
+      margin: 0 0 0.5rem;
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-color);
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Us</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">← Back to Home</a>
+  </nav>
+
+  <section class="developer">
+    <img src="img/krishna.png" alt="Developer 1">
+    <div class="dev-info">
+      <h3>Krishna Paithankar</h3>
+      <p>B.tech CSE (2028)</p>
+      <p>Frontend developer passionate about blending Ayurveda and tech through elegant web design. Loves minimalism and clean UI.</p>
+    </div>
+  </section>
+
+  <section class="developer">
+    <img src="img/vedant.png" alt="Developer 2">
+    <div class="dev-info">
+      <h3>Vedant Pandhare</h3>
+      <p>B.tech CSE (2028)</p>
+      <p>Backend specialist with a knack for secure and scalable solutions. Ayurveda enthusiast and yoga practitioner.</p>
+    </div>
+  </section>
+
+  <section class="developer">
+    <img src="img/gayatri.png" alt="Developer 3">
+    <div class="dev-info">
+      <h3>Gayatri Karad</h3>
+      <p>B.tech CSE (2028)</p>
+      <p>Content strategist and researcher who ensures accurate Ayurvedic insights. Brings balance of science and tradition.</p>
+    </div>
+  </section>
+
+  <section class="developer">
+    <img src="img/Sharwari .png" alt="Developer 4">
+    <div class="dev-info">
+      <h3>Sharwari Palhal</h3>
+      <p>B.tech CSE (2028)</p>
+      <p>UI/UX designer blending ancient wellness with modern aesthetics. Enjoys painting and digital illustration.</p>
+    </div>
+  </section>
+
+  <section class="developer">
+    <img src="img/dev5.jpg" alt="Developer 5">
+    <div class="dev-info">
+      <h3>Vaishnavi Kathar</h3>
+      <p>B.tech CSE (2028)</p>
+      <p>Full-stack engineer ensuring seamless performance. Dedicated to building culturally rich and educational tools.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Ritucharya Ayurveda. All rights reserved.
+  </footer>
+</body>
+</html>
