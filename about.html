@@ -14,6 +14,7 @@
       --header-bg: var(--primary-color);
       --header-color: white;
     }
+
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
@@ -25,6 +26,7 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     header {
       background: var(--header-bg);
       color: var(--header-color);
@@ -34,10 +36,12 @@
       border-radius: 8px;
       margin-bottom: 2rem;
     }
+
     header h1 {
       margin: 0 0 0.25rem 0;
       font-size: 2.5rem;
     }
+
     nav a {
       display: inline-block;
       margin-bottom: 2rem;
@@ -49,19 +53,23 @@
       border-radius: 4px;
       transition: background-color 0.3s ease;
     }
+
     nav a:hover {
       background-color: var(--primary-color);
       color: white;
     }
+
     .developer {
       display: flex;
       align-items: center;
       gap: 1.5rem;
       margin-bottom: 2.5rem;
     }
+
     .developer:nth-child(even) {
       flex-direction: row-reverse;
     }
+
     .developer img {
       width: 180px;
       height: 200px;
@@ -69,11 +77,36 @@
       border-radius: 12px;
       border: 3px solid var(--accent-color);
     }
+
     .dev-info h3 {
       margin: 0 0 0.5rem;
       font-family: 'Playfair Display', serif;
       color: var(--primary-color);
     }
+
+    .team-section {
+      margin-top: 3rem;
+    }
+
+    .team-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .team-member {
+      margin-bottom: 1.2rem;
+      text-align: center;
+    }
+
+    .team-member h4 {
+      margin: 0.2rem 0;
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -93,7 +126,51 @@
     <a href="index.html">← Back to Home</a>
   </nav>
 
-  <section class="developer">
+  <!-- CSMSS Ayurveda Team Section -->
+  <section class="team-section">
+    <h2>CSMSS Ayurveda Mahavidyalay Team</h2>
+    <div class="team-member">
+      <h4>Dr. Shrikant Deshmukh</h4>
+      <p>Principal CSMSS Ayurved Mahavidyala & Rugnalaya,</br> Kanchanwadi, Chh. Sambhajinagar </p>
+    </div>
+    <div class="team-member">
+      <h4>Dr. Smita S. Dhurde</h4>
+      <p>HOD & Guide</br>Samhita Siddhant Evam Sanskrit Dept.</p>
+    </div>
+    <div class="team-member">
+      <h4>Dr. Ujjwala R. Upadhyay</h4>
+      <p>Associate Professer & EDC Incharge</p>
+    </div>
+    <div class="team-member">
+      <h4>Dr. Anjali P. Hingane</h4>
+      <p>Associate Professer</p>
+    </div>
+    <div class="team-member">
+      <h4>Dr. Pritam J. Rathi</h4>
+      <p>Associate Professer</p>
+    </div>
+    <div class="team-member">
+      <h4>Dr. Kiran Bhojaraj</h4>
+      <p>Associate Professer</p>
+    </div>
+    <div class="team-member">
+      <h4>Dr. Sanjivani P. Janjal</h4>
+      <p>MD Final Year</p>
+    </div>
+    <div class="team-member">
+      <h4>Dr. Aishwarya Kaluse</h4>
+      <p>MD Final Year</p>
+    </div>
+    <div class="team-member">
+      <h4>Dr. Utkarsha Kulkarni</h4>
+      <p>MD Final Year</p>
+    </div>
+  </section>
+
+  <!-- CSMSS College of Engineering Team Section -->
+  <section class="team-section">
+    <h2>CSMSS Chh. Shahu College of Engineering Team</h2>
+    <section class="developer">
     <img src="img/krishna.png" alt="Developer 1">
     <div class="dev-info">
       <h3>Krishna Paithankar</h3>
@@ -129,7 +206,7 @@
     </div>
   </section>
 
- <section class="developer">
+  <section class="developer">
     <img src="img/vaishnavi.jpeg" alt="Developer 5">
     <div class="dev-info">
       <h3>Vaishnavi Kathar</h3>
@@ -137,9 +214,33 @@
       <p>Full-stack engineer ensuring seamless performance. Dedicated to building culturally rich and educational tools.</p>
     </div>
   </section>
+  <h2>Professer CEE</h2>
+  <div class="team-member">
+      <h4>Prof. Vinod Damdhar</h4>
+      <p>Head Center Of Engineering Exploration</p>
+  </div>
+  <div class="team-member">
+      <h4>Prof. Dhammadeep Gadhe</h4>
+      <p>Associate Professer</p>
+  </div>
+  <div class="team-member">
+      <h4>Prof. Sanket Milke</h4>
+      <p>Associate Professer</p>
+  </div>
+  <div class="team-member">
+      <h4>Prof. Ganesh Kotiye</h4>
+      <p>Associate Professer</p>
+  </div>
+  <div class="team-member">
+      <h4>Prof. Santosh Thorwe</h4>
+      <p>Associate Professer</p>
+  </div>
+
+  </section>
 
   <footer>
     &copy; 2025 Ritucharya Ayurveda. All rights reserved.
   </footer>
 </body>
 </html>
+
